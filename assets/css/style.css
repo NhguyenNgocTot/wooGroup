@@ -470,3 +470,26 @@ body {
   -webkit-animation: titleFooter 2s ease 5s forwards;
           animation: titleFooter 2s ease 5s forwards;
 }
+.wooGroup-sectionPrivacyPolicy {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100vh;
+}
+.wooGroup-sectionPrivacyPolicy h1.title-box {
+  text-align: left;
+}
+.wooGroup-sectionPrivacyPolicy .list-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+.wooGroup-sectionPrivacyPolicy .list-content .item {
+  width: calc(50% - 10px);
+  margin: 10px 5px;
+}

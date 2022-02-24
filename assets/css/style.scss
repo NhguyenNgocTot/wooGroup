@@ -94,7 +94,7 @@ body{
     .wooGroup-section-1 .content-box{font-size: 28px;}
     .wooGroup .wooGroup-section-boxRight p.content-box{font-size: 18px;}
     .wooGroup-section-3 .content-box { font-size: 28px;line-height: 40px;}
-
+    
 }
 $red: #FF001E;
 $black: #000000;
@@ -319,5 +319,20 @@ $white:#FFFFFF;
         h1.title-box{ 
             animation: titleFooter 2s ease 5s forwards;
         }
+    }
+
+    &-sectionPrivacyPolicy{
+        display: flex;
+        align-items: center;
+        height: 100vh;
+       h1.title-box{text-align: left;} 
+       .list-content{
+           display: flex;
+           flex-wrap: wrap;
+           .item{
+            width: calc(50% - 10px);
+            margin: 10px 5px;
+           }
+       }
     }
 }
