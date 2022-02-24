@@ -349,7 +349,7 @@ body {
   opacity: 0;
   color: #fff;
 }
-.wooGroup-section-3 h1.title-box {
+.wooGroup-section-3 h2.title-box {
   text-align: left;
   position: relative;
   left: 100px;
@@ -466,7 +466,7 @@ body {
   -webkit-animation: contentFooter 2s ease 3s forwards;
           animation: contentFooter 2s ease 3s forwards;
 }
-.wooGroup .swiper-slide-active .wooGroup-section-3 h1.title-box {
+.wooGroup .swiper-slide-active .wooGroup-section-3 h2.title-box {
   -webkit-animation: titleFooter 2s ease 5s forwards;
           animation: titleFooter 2s ease 5s forwards;
 }

@@ -256,7 +256,7 @@ $white:#FFFFFF;
         opacity: 0;
         color: #fff;
         
-        h1.title-box{
+        h2.title-box{
             text-align: left;
             position: relative;
             left: 100px;
@@ -316,7 +316,7 @@ $white:#FFFFFF;
         .content-box{
             animation: contentFooter 2s ease 3s forwards;
         }
-        h1.title-box{ 
+        h2.title-box{ 
             animation: titleFooter 2s ease 5s forwards;
         }
     }
