@@ -343,11 +343,12 @@ body {
       -ms-flex-align: center;
           align-items: center;
   width: 100vw;
-  height: calc(100vh - 50px);
+  height: calc(100vh);
   -webkit-transition: all 2s ease;
   transition: all 2s ease;
   opacity: 0;
   color: #fff;
+  position: relative;
 }
 .wooGroup-section-3 h2.title-box {
   text-align: left;
@@ -429,6 +430,9 @@ body {
 .wooGroup .footer {
   height: 50px;
   background: #fff;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
 }
 .wooGroup .footer .container {
   height: 100%;
@@ -540,7 +544,7 @@ body {
     margin-top: 10px;
   }
   .wooGroup .wooGroup-section-3 {
-    height: calc(100vh - 100px);
+    height: calc(100vh - 40px);
   }
   .wooGroup .wooGroup-section-3 .content-box {
     font-size: 16px;
@@ -550,7 +554,6 @@ body {
     font-size: 32px;
   }
   .wooGroup .footer {
-    height: 100px;
     padding: 10px 0;
   }
   .wooGroup .footer-box {

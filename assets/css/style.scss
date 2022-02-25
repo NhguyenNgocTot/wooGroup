@@ -251,11 +251,11 @@ $white:#FFFFFF;
         flex-wrap: wrap;
         align-items: center;
         width: 100vw;
-        height: calc(100vh - 50px);
+        height: calc(100vh);
         transition: all 2s ease;
         opacity: 0;
         color: #fff;
-        
+        position: relative;
         h2.title-box{
             text-align: left;
             position: relative;
@@ -288,6 +288,9 @@ $white:#FFFFFF;
     .footer{
         height: 50px;
         background: #fff;
+        width: 100%;
+        position: absolute;
+        bottom: 0;
         .container{height: 100%;}
         .footer-box{
             display: flex;
@@ -386,7 +389,7 @@ $white:#FFFFFF;
             margin-top: 10px;
         }
         .wooGroup-section-3{
-        height: calc(100vh - 100px);
+        height: calc(100vh - 40px);
             .content-box{
                 font-size: 16px;
                 line-height: 26px;
@@ -396,7 +399,6 @@ $white:#FFFFFF;
             }
         }
          .footer {
-            height: 100px;
             padding: 10px 0;
             &-box{
                 height: auto !important;
