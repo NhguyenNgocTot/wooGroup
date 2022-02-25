@@ -504,6 +504,9 @@ body {
     text-align: center;
   }
 
+  .wooGroup .wooGroup-section-2 .title-box::after {
+    content: unset;
+  }
   .wooGroup .wooGroup-section-boxLeft, .wooGroup .wooGroup-section-boxRight {
     width: 100%;
   }

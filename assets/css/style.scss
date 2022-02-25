@@ -349,6 +349,9 @@ $white:#FFFFFF;
         }
     }
     .wooGroup {
+        .wooGroup-section-2 .title-box::after{
+            content: unset;
+        }
         .wooGroup-section-box{
             &Left,&Right{
                 width: 100%;
