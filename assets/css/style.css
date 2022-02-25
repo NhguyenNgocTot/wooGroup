@@ -539,6 +539,9 @@ body {
   .wooGroup .wooGroup-section-2 .content-box a {
     margin-top: 10px;
   }
+  .wooGroup .wooGroup-section-3 {
+    height: calc(100vh - 100px);
+  }
   .wooGroup .wooGroup-section-3 .content-box {
     font-size: 16px;
     line-height: 26px;
@@ -547,7 +550,7 @@ body {
     font-size: 32px;
   }
   .wooGroup .footer {
-    height: 80px;
+    height: 100px;
     padding: 10px 0;
   }
   .wooGroup .footer-box {
