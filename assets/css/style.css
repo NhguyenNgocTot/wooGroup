@@ -543,9 +543,6 @@ body {
   .wooGroup .wooGroup-section-2 .content-box a {
     margin-top: 10px;
   }
-  .wooGroup .wooGroup-section-3 {
-    height: calc(100vh - 80px);
-  }
   .wooGroup .wooGroup-section-3 .content-box {
     font-size: 16px;
     line-height: 26px;
@@ -555,6 +552,8 @@ body {
   }
   .wooGroup .footer {
     padding: 10px 0;
+    height: auto;
+    bottom: 40px;
   }
   .wooGroup .footer-box {
     height: auto !important;
@@ -564,5 +563,16 @@ body {
   }
   .wooGroup .footer-boxRight a {
     padding-right: 30px;
+  }
+
+  .content-boxPrivacyPolicy .title-box {
+    font-size: 37px;
+    line-height: 40px;
+  }
+
+  .wooGroup-sectionPrivacyPolicy .list-content .item {
+    width: 100%;
+    font-size: 15px;
+    line-height: 18px;
   }
 }

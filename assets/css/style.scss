@@ -389,7 +389,6 @@ $white:#FFFFFF;
             margin-top: 10px;
         }
         .wooGroup-section-3{
-        height: calc(100vh - 80px);
             .content-box{
                 font-size: 16px;
                 line-height: 26px;
@@ -400,6 +399,8 @@ $white:#FFFFFF;
         }
          .footer {
             padding: 10px 0;
+            height: auto;
+            bottom: 40px;
             &-box{
                 height: auto !important;
                 &Left{
@@ -414,5 +415,16 @@ $white:#FFFFFF;
                 }
             }
          }
+    }
+    .content-boxPrivacyPolicy{
+        .title-box{
+            font-size: 37px;
+            line-height: 40px;
+        }
+    }
+    .wooGroup-sectionPrivacyPolicy .list-content .item{
+        width: 100%;
+        font-size: 15px;
+        line-height: 18px;
     }
 }
