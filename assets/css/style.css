@@ -525,7 +525,7 @@ body {
     margin: 0;
     height: 100px;
     font-size: 32px;
-    min-height: 100px;
+    min-height: 70px;
   }
   .wooGroup .wooGroup-section-boxRight .content-box {
     font-size: 16px;
