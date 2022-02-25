@@ -533,6 +533,9 @@ body {
     line-height: 18px;
     color: #707070;
   }
+  .wooGroup .wooGroup-section-2 .content-box a {
+    margin-top: 10px;
+  }
   .wooGroup .wooGroup-section-3 .content-box {
     font-size: 16px;
     line-height: 26px;
