@@ -365,6 +365,7 @@ $white:#FFFFFF;
             &Right{
                 padding: 0 15px;
                 height: calc(100vh - 40vh);
+                display: unset !important;
                 .title-box{
                     margin: 0;
                     height: 100px;

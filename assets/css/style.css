@@ -520,6 +520,7 @@ body {
   .wooGroup .wooGroup-section-boxRight {
     padding: 0 15px;
     height: calc(100vh - 40vh);
+    display: unset !important;
   }
   .wooGroup .wooGroup-section-boxRight .title-box {
     margin: 0;
