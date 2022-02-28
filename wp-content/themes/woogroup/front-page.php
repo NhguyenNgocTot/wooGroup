@@ -21,12 +21,12 @@ get_header();
                                     data-aos="fade-right"
                                     data-aos-delay="1500"
                                     data-aos-easing="ease-in-sine"
-                                >o</span>
+                                >O</span>
                                 <span
                                     data-aos="fade-right"
                                     data-aos-delay="2000"
                                     data-aos-easing="ease-in-sine"
-                                >o</span>
+                                >O</span>
                             </h1>
                             <!-- <p class="content-box" data-aos="fade-up" data-aos-delay="3000">
                             </p> -->
@@ -36,7 +36,7 @@ get_header();
                 <div class="swiper-slide" data-name="Woo">
                     <div class="wooGroup-section-1">
                         <div class="container">
-                            <p class="content-box" data-aos="fade-up" data-aos-delay="3000">
+                            <p class="content-box">
                                 <?= get_field('introduce_description'); ?>
                             </p>
                         </div>

@@ -123,6 +123,7 @@ body {
 }
 .wooGroup h1.title-box {
   text-align: center;
+  letter-spacing: -10px;
 }
 .wooGroup .swiper-slide {
   overflow: hidden;
