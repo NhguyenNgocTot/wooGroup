@@ -8,6 +8,11 @@ get_header();
 </style>
     <div id="wooGroup" class="wooGroup">
         <div class="swiper mySwiper">
+        <div
+            class="parallax-bg"
+            style="background-image:url('http://localhost/main/wp-content/uploads/2022/02/OpenGraphImage-1.png')"
+            data-swiper-parallax="-300%"
+        ></div>
             <div class="swiper-wrapper">
                 <div class="swiper-slide" data-name="Woo">
                     <div class="wooGroup-section-1">

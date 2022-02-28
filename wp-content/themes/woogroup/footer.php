@@ -7,17 +7,6 @@
 <script type="text/javascript" src="js/script.js"></script>
 <script>
     AOS.init();
-    var swiper = new Swiper(".mySwiper", {
-        direction: "vertical",
-        slidesPerView: 1,
-        spaceBetween: 30,
-        mousewheel: true,
-        effect: "fade",
-        pagination: {
-          el: ".swiper-pagination",
-          clickable: true,
-        },
-      });
 
       const $bigBall = document.querySelector('.cursor__ball--big');
       const $smallBall = document.querySelector('.cursor__ball--small');
@@ -63,7 +52,8 @@
             slidesPerView: 1,
             spaceBetween: 30,
             mousewheel: true,
-            effect: "fade",
+            parallax: true,
+            speed: 300,
             pagination: {
             el: ".swiper-pagination",
             clickable: true,
