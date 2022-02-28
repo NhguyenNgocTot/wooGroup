@@ -103,12 +103,13 @@ body{
     
 }
 
-
-.wooGroup{
+#wooGroup{
     h1.title-box{
         text-align: center;
         letter-spacing: -10px;
     }
+}
+.wooGroup{
     .swiper-slide{
         overflow: hidden;
     }
@@ -325,21 +326,14 @@ body{
             animation: titleFooter 2s ease 4s forwards;
         }
     }
-    .wooGroup-section-3.showSection{ 
-        transition: all 1s ease;
-        opacity: 1;
-        .content-box{
-            animation: contentFooter 1s ease 1s forwards;
-        }
-        h2.title-box{ 
-            animation: titleFooter 1s ease 2s forwards;
-        }
-    }
-    &-sectionPrivacyPolicy{
+}
+//privacyPolicy
+
+.wooGroup.privacyPolicy{
+    .wooGroup-sectionPrivacyPolicy{
         display: flex;
         align-items: center;
         padding: 40px 0;
-
        h1.title-box{text-align: left;} 
        .list-content{
            display: flex;
@@ -349,15 +343,6 @@ body{
             margin: 10px 5px;
            }
        }
-    }
-}
-.privacyPolicy{
-    overflow: hidden;
-    .wooGroup-section-3{
-        height: 700px;
-        .footer{
-            bottom: 0 !important;
-        }
     }
 }
 
@@ -375,7 +360,8 @@ body{
     height: 25px !important;
     border-radius: 0 !important;
 }
-body {
+//mouse
+body.home {
     cursor: none;
     .cursor {
       pointer-events: none;
@@ -397,6 +383,28 @@ body {
         }
       }      
     } 
+  }
+  body.privacy-policy{
+    cursor: none;
+        .cursor {
+            pointer-events: none;
+        &__ball {
+            position: fixed;
+            top: 0;
+            left: 0;
+            mix-blend-mode: difference;
+            z-index: 1000;
+            circle {
+            fill: $black;
+            }
+            &--big{
+                svg{
+                    border: 1px solid $black;
+                    border-radius: 50%;
+                }
+            }
+        }      
+        } 
   }
   //duc
   .swiper-pagination-clickable .swiper-pagination-bullet {
@@ -427,19 +435,6 @@ body {
     }
 //Responsive
 @media (max-width: 1200px) { 
-    .privacyPolicy{
-        .wooGroup-section-3{
-            opacity: 1;
-            .content-box{
-                top: 0;
-                opacity: 1;
-            }
-            .title-box{
-                left: 0;
-                opacity: 1;
-            }
-        }
-    }
     .wooGroup .wooGroup-section-boxRight{
         padding-left: 60px;
     }

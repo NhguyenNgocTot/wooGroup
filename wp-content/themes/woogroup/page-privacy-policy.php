@@ -2,6 +2,9 @@
 get_header(); 
 ?>
     <div id="privacyPolicy" class="wooGroup privacyPolicy" >
+        <div class="swiper mySwiper-privacyPolicy">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
                     <div class="wooGroup-sectionPrivacyPolicy">
                         <div class="container">
                             <div class="logo">
@@ -36,6 +39,8 @@ get_header();
                             </div>
                         </div>
                     </div>
+                </div>
+                <div class="swiper-slide">
                     <div class="wooGroup-section-3">
                         <div class="container">
                             <p class="content-box">
@@ -58,22 +63,14 @@ get_header();
                             </div>
                         </div>
                     </div>
+                </div>
+            </div>
+        </div>
     </div>
     
 <?php
 get_footer(); 
 ?>
 <script>
-        // $(document).ready(function($){
-        //     $width = $(window).width();
-        //     if ($width > 1200) {
-        //         $('.wooGroup-section-3').mouseenter(function(){
-        //             $(this).addClass('showSection');
-        //         });
-        //         $('.wooGroup-section-3').mouseleave(function(){
-        //             $('.wooGroup-section-3.showSection').removeClass('showSection');
-        //         });
-        //     }
-            
-        // })
-    </script>
+       
+</script>
