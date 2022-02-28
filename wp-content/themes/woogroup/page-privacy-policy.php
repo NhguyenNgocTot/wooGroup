@@ -64,16 +64,16 @@ get_header();
 get_footer(); 
 ?>
 <script>
-        $(document).ready(function($){
-            $width = $(window).width();
-            if ($width > 1200) {
-                $('.wooGroup-section-3').mouseenter(function(){
-                    $(this).addClass('showSection');
-                });
-                $('.wooGroup-section-3').mouseleave(function(){
-                    $('.wooGroup-section-3.showSection').removeClass('showSection');
-                });
-            }
+        // $(document).ready(function($){
+        //     $width = $(window).width();
+        //     if ($width > 1200) {
+        //         $('.wooGroup-section-3').mouseenter(function(){
+        //             $(this).addClass('showSection');
+        //         });
+        //         $('.wooGroup-section-3').mouseleave(function(){
+        //             $('.wooGroup-section-3.showSection').removeClass('showSection');
+        //         });
+        //     }
             
-        })
+        // })
     </script>

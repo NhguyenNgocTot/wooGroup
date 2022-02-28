@@ -153,6 +153,38 @@ body {
   max-width: 900px;
   margin: auto;
 }
+.wooGroup .swiper-slide-active .wooGroup-section-boxLeft:before {
+  -webkit-animation: imgTop 4s ease 0s forwards;
+  animation: imgTop 5s ease 0s forwards;
+}
+@-webkit-keyframes imgTop {
+  0% {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+    -webkit-transition: all 3s ease;
+    transition: all 3s ease;
+  }
+  100% {
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%);
+    -webkit-transition: all 3s ease;
+    transition: all 3s ease;
+  }
+}
+@keyframes imgTop {
+  0% {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+    -webkit-transition: all 3s ease;
+    transition: all 3s ease;
+  }
+  100% {
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%);
+    -webkit-transition: all 3s ease;
+    transition: all 3s ease;
+  }
+}
 .wooGroup .wooGroup-section-box {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -162,6 +194,15 @@ body {
 }
 .wooGroup .wooGroup-section-boxLeft {
   width: 50%;
+  position: relative;
+}
+.wooGroup .wooGroup-section-boxLeft::before {
+  background: #fff;
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
 }
 .wooGroup .wooGroup-section-boxRight {
   text-align: left;
@@ -177,13 +218,14 @@ body {
   text-align: left;
   width: 100%;
   position: relative;
+  color: #000000;
 }
 .wooGroup .wooGroup-section-boxRight .content-box {
   font-size: 20px;
   max-width: 580px;
 }
 .wooGroup-section-2 {
-  background: #fff;
+  background: #FFFFFF;
 }
 .wooGroup-section-2 .title-box::after {
   content: "";
@@ -213,12 +255,12 @@ body {
   width: 100%;
 }
 .wooGroup-section-2b.swiper-slide-active .title-box span {
-  -webkit-animation: titleTop 2s ease 1s forwards;
-          animation: titleTop 2s ease 1s forwards;
+  -webkit-animation: titleTop 2s ease 0s forwards;
+          animation: titleTop 2s ease 0s forwards;
 }
 .wooGroup-section-2b.swiper-slide-active .content-box {
-  -webkit-animation: contentBox 2s ease 3s forwards;
-          animation: contentBox 2s ease 3s forwards;
+  -webkit-animation: contentBox 2s ease 2s forwards;
+          animation: contentBox 2s ease 2s forwards;
 }
 .wooGroup-section-2.swiper-slide-active .wooGroup-section-boxRight .title-box {
   position: relative;
@@ -308,7 +350,7 @@ body {
   }
 }
 .wooGroup-section-3 {
-  background: black;
+  background: #000000;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -322,7 +364,7 @@ body {
   -webkit-transition: all 2s ease;
   transition: all 2s ease;
   opacity: 0;
-  color: #fff;
+  color: #FFFFFF;
   position: relative;
 }
 .wooGroup-section-3 h2.title-box {
@@ -404,7 +446,7 @@ body {
 }
 .wooGroup .footer {
   height: 50px;
-  background: #fff;
+  background: #FFFFFF;
   width: 100%;
   position: absolute;
   bottom: 0;
@@ -442,12 +484,12 @@ body {
   opacity: 1;
 }
 .wooGroup .swiper-slide-active .wooGroup-section-3 .content-box {
-  -webkit-animation: contentFooter 2s ease 3s forwards;
-          animation: contentFooter 2s ease 3s forwards;
+  -webkit-animation: contentFooter 2s ease 2s forwards;
+          animation: contentFooter 2s ease 2s forwards;
 }
 .wooGroup .swiper-slide-active .wooGroup-section-3 h2.title-box {
-  -webkit-animation: titleFooter 2s ease 5s forwards;
-          animation: titleFooter 2s ease 5s forwards;
+  -webkit-animation: titleFooter 2s ease 4s forwards;
+          animation: titleFooter 2s ease 4s forwards;
 }
 .wooGroup .wooGroup-section-3.showSection {
   -webkit-transition: all 1s ease;
@@ -455,12 +497,12 @@ body {
   opacity: 1;
 }
 .wooGroup .wooGroup-section-3.showSection .content-box {
-  -webkit-animation: contentFooter 1s ease 2s forwards;
-          animation: contentFooter 1s ease 2s forwards;
+  -webkit-animation: contentFooter 1s ease 1s forwards;
+          animation: contentFooter 1s ease 1s forwards;
 }
 .wooGroup .wooGroup-section-3.showSection h2.title-box {
-  -webkit-animation: titleFooter 1s ease 4s forwards;
-          animation: titleFooter 1s ease 4s forwards;
+  -webkit-animation: titleFooter 1s ease 2s forwards;
+          animation: titleFooter 1s ease 2s forwards;
 }
 .wooGroup-sectionPrivacyPolicy {
   display: -webkit-box;
@@ -494,6 +536,75 @@ body {
 }
 .privacyPolicy .wooGroup-section-3 .footer {
   bottom: 0 !important;
+}
+
+.swiper-pagination-bullet {
+  width: 7px !important;
+  height: 7px !important;
+  margin-bottom: 10px !important;
+  background: #000000 !important;
+  margin: 12px auto !important;
+  opacity: 1 !important;
+}
+
+.swiper-pagination-bullet.swiper-pagination-bullet-active {
+  background: #FF001E !important;
+  width: 2px !important;
+  height: 25px !important;
+  border-radius: 0 !important;
+}
+
+body {
+  cursor: none;
+}
+body .cursor {
+  pointer-events: none;
+}
+body .cursor__ball {
+  position: fixed;
+  top: 0;
+  left: 0;
+  mix-blend-mode: difference;
+  z-index: 1000;
+}
+body .cursor__ball circle {
+  fill: #FFFFFF;
+}
+body .cursor__ball--big svg {
+  border: 1px solid #FFFFFF;
+  border-radius: 50%;
+}
+
+.swiper-pagination-clickable .swiper-pagination-bullet {
+  position: relative;
+}
+
+.swiper-pagination-clickable .swiper-pagination-bullet span {
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  background: white;
+  font-size: 16px;
+  padding: 0px 10px;
+  border-radius: 10px;
+  top: 0;
+  right: 0px;
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+  color: #000000;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  -webkit-box-shadow: 0 1px 7px 0 rgba(0, 0, 0, 0.35);
+          box-shadow: 0 1px 7px 0 rgba(0, 0, 0, 0.35);
+}
+
+.swiper-pagination-clickable .swiper-pagination-bullet:hover span {
+  opacity: 1;
+  right: 15px;
+  visibility: visible;
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
 }
 
 @media (max-width: 1200px) {

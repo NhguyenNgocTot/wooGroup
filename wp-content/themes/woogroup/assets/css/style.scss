@@ -1,3 +1,8 @@
+$red: #FF001E;
+$black: #000000;
+$charcoal: #0F0F0F;
+$grey: #707070;
+$white:#FFFFFF;
 h2,h3,h4,h5,p,a,p {
     font-family: Roobert-Regular;
 }
@@ -15,7 +20,7 @@ h3{
     line-height: 58px; 
 }
 a{
-    color: #FF001E;
+    color: $red;
     text-decoration: none;
 }
 img{
@@ -97,11 +102,7 @@ body{
     .wooGroup-section-3 .content-box { font-size: 28px;line-height: 40px;}
     
 }
-$red: #FF001E;
-$black: #000000;
-$charcoal: #0F0F0F;
-$grey: #707070;
-$white:#FFFFFF;
+
 
 .wooGroup{
     h1.title-box{
@@ -128,13 +129,38 @@ $white:#FFFFFF;
                 max-width: 900px;
                 margin: auto;
             }
+    }
+    .swiper-slide-active .wooGroup-section-boxLeft:before {
+        -webkit-animation: imgTop 4s ease 0s forwards;
+        animation: imgTop 5s ease 0s forwards;
+    }
+    @keyframes imgTop {
+        0% {
+          transform: translateY(0%);
+          -webkit-transition: all 3s ease;
+          transition: all 3s ease;
         }
-    
-        .wooGroup-section-box{
+        100% {
+          transform: translateY(-100%);
+          -webkit-transition: all 3s ease;
+          transition: all 3s ease;
+        }
+    }
+    .wooGroup-section-box{
             display: flex;
             flex-wrap: wrap;
             &Left{
                 width: 50%;
+                position: relative;
+                &::before{
+                    background: #fff;
+                    content: "";
+                    width: 100%;
+                    height: 100%;
+                    position: absolute;
+                    top: 0;
+                }
+                
             }
             &Right{ 
                 text-align: left;
@@ -146,6 +172,7 @@ $white:#FFFFFF;
                     text-align: left;
                     width: 100%;
                     position: relative;
+                    color: $black;
                 }
                 .content-box{
                     font-size: 20px;
@@ -153,9 +180,9 @@ $white:#FFFFFF;
                 }
                 
             }
-        }
+    }
     &-section-2{ 
-        background: #fff;
+        background: $white;
         .title-box{
             &::after{
                 content: "";
@@ -163,7 +190,7 @@ $white:#FFFFFF;
                 height: 150px;
                 left: -10px;
                 top: 120px;
-                background: #FFFFFF;
+                background: $white;
                 display: block;
                 position: absolute;
             }
@@ -187,11 +214,11 @@ $white:#FFFFFF;
     &-section-2b.swiper-slide-active{
         .title-box{
             span{
-                animation: titleTop 2s ease 1s forwards;
+                animation: titleTop 2s ease 0s forwards;
             } 
          }
          .content-box{ 
-            animation: contentBox 2s ease 3s forwards;
+            animation: contentBox 2s ease 2s forwards;
          }
         
     }
@@ -220,7 +247,7 @@ $white:#FFFFFF;
         }
     }
     &-section-3{
-        background: black;
+        background: $black;
         display: flex;
         flex-wrap: wrap;
         align-items: center;
@@ -228,7 +255,7 @@ $white:#FFFFFF;
         height: calc(100vh);
         transition: all 2s ease;
         opacity: 0;
-        color: #fff;
+        color: $white;
         position: relative;
         h2.title-box{
             text-align: left;
@@ -261,7 +288,7 @@ $white:#FFFFFF;
     }
     .footer{
         height: 50px;
-        background: #fff;
+        background: $white;
         width: 100%;
         position: absolute;
         bottom: 0;
@@ -291,20 +318,20 @@ $white:#FFFFFF;
         transition: all 2s ease;
         opacity: 1;
         .content-box{
-            animation: contentFooter 2s ease 3s forwards;
+            animation: contentFooter 2s ease 2s forwards;
         }
         h2.title-box{ 
-            animation: titleFooter 2s ease 5s forwards;
+            animation: titleFooter 2s ease 4s forwards;
         }
     }
     .wooGroup-section-3.showSection{ 
         transition: all 1s ease;
         opacity: 1;
         .content-box{
-            animation: contentFooter 1s ease 2s forwards;
+            animation: contentFooter 1s ease 1s forwards;
         }
         h2.title-box{ 
-            animation: titleFooter 1s ease 4s forwards;
+            animation: titleFooter 1s ease 2s forwards;
         }
     }
     &-sectionPrivacyPolicy{
@@ -332,6 +359,71 @@ $white:#FFFFFF;
         }
     }
 }
+
+.swiper-pagination-bullet{
+    width: 7px !important;
+    height: 7px !important;
+    margin-bottom: 10px !important;
+    background: $black !important;  
+    margin: 12px auto !important;
+    opacity: 1 !important;
+} 
+.swiper-pagination-bullet.swiper-pagination-bullet-active{
+    background: $red !important;
+    width: 2px !important;
+    height: 25px !important;
+    border-radius: 0 !important;
+}
+body {
+    cursor: none;
+    .cursor {
+      pointer-events: none;
+      
+      &__ball {
+        position: fixed;
+        top: 0;
+        left: 0;
+        mix-blend-mode: difference;
+        z-index: 1000;
+        circle {
+          fill: $white;
+        }
+        &--big{
+            svg{
+                border: 1px solid $white;
+                border-radius: 50%;
+            }
+        }
+      }      
+    } 
+  }
+  //duc
+  .swiper-pagination-clickable .swiper-pagination-bullet {
+    position: relative;
+    }
+
+    .swiper-pagination-clickable .swiper-pagination-bullet span {
+        opacity: 0;
+        visibility: hidden;
+        position: absolute;
+        background: white;
+        font-size: 16px;
+        padding: 0px 10px;
+        border-radius: 10px;
+        top: 0;
+        right: 0px;
+        transition: all 1s ease;
+        color: $black;
+        width: max-content;
+        box-shadow: 0 1px 7px 0 rgb(0 0 0 / 35%);
+    }
+
+    .swiper-pagination-clickable .swiper-pagination-bullet:hover span {
+        opacity: 1;
+        right: 15px;
+        visibility: visible;
+        transition: all 1s ease;
+    }
 //Responsive
 @media (max-width: 1200px) { 
     .privacyPolicy{

@@ -9,7 +9,7 @@ get_header();
     <div id="wooGroup" class="wooGroup">
         <div class="swiper mySwiper">
             <div class="swiper-wrapper">
-                <div class="swiper-slide">
+                <div class="swiper-slide" data-name="Woo">
                     <div class="wooGroup-section-1">
                         <div class="container">
                             <h1 class="title-box">
@@ -28,6 +28,14 @@ get_header();
                                     data-aos-easing="ease-in-sine"
                                 >o</span>
                             </h1>
+                            <!-- <p class="content-box" data-aos="fade-up" data-aos-delay="3000">
+                            </p> -->
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide" data-name="Woo">
+                    <div class="wooGroup-section-1">
+                        <div class="container">
                             <p class="content-box" data-aos="fade-up" data-aos-delay="3000">
                                 <?= get_field('introduce_description'); ?>
                             </p>
@@ -40,7 +48,7 @@ get_header();
                         $image = get_sub_field('image');
                         $description = get_sub_field('description');
                 ?>
-                        <div class="swiper-slide wooGroup-section-2 wooGroup-section-2b <?= $i ?>">
+                        <div class="swiper-slide wooGroup-section-2 wooGroup-section-2b <?= $i ?>" data-name="<?= $title ?>">
                             <div class="wooGroup-section-box">
                                 <div class="wooGroup-section-boxLeft">
                                     <img src="<?= $image ?>" alt="">
@@ -63,7 +71,7 @@ get_header();
                     }
                 ?>
                 
-                <div class="swiper-slide">
+                <div class="swiper-slide" data-name="<?= get_field('title_footer','option') ?>">
                     <div class="wooGroup-section-3">
                         <div class="container">
                             <p class="content-box">
