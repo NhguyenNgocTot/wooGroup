@@ -84,7 +84,8 @@
             slidesPerView: 1,
             spaceBetween: 30,
             mousewheel: true,
-            effect: "fade",
+            parallax: true,
+            speed: 300,
             pagination: {
             el: ".swiper-pagination",
             clickable: true,

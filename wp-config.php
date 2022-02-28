@@ -23,8 +23,8 @@
  * @package WordPress
  */
 
-// define('WP_HOME', ($_SERVER['HTTPS'] ? 'https://' : 'http://') . $_SERVER['HTTP_HOST']);
-// define('WP_SITEURL',  ($_SERVER['HTTPS'] ? 'https://' : 'http://') . $_SERVER['HTTP_HOST']);
+define('WP_HOME','http://localhost/main');
+define('WP_SITEURL',  'http://localhost/main');
 //define('FORCE_SSL', false);
 //define('FORCE_SSL_ADMIN', false);
 define( 'WPCF7_AUTOP', 'false' );
