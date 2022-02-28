@@ -18,20 +18,9 @@ get_header();
                     <div class="wooGroup-section-1">
                         <div class="container">
                             <h1 class="title-box">
-                                <span 
-                                    data-aos="fade-right"
-                                    data-aos-delay="1000"
-                                    data-aos-easing="ease-in-sine">W</span>
-                                <span
-                                    data-aos="fade-right"
-                                    data-aos-delay="1500"
-                                    data-aos-easing="ease-in-sine"
-                                >O</span>
-                                <span
-                                    data-aos="fade-right"
-                                    data-aos-delay="2000"
-                                    data-aos-easing="ease-in-sine"
-                                >O</span>
+                                <span class="text text1">W</span>
+                                <span class="text text2">O</span>
+                                <span class="text text3">O</span>
                             </h1>
                         </div>
                     </div>
@@ -39,9 +28,9 @@ get_header();
                 <div class="swiper-slide" data-name="Woo">
                     <div class="wooGroup-section-1">
                         <div class="container">
-                            <p class="content-box">
+                            <div class="content-box">
                                 <?= get_field('introduce_description'); ?>
-                            </p>
+                            </div>
                         </div>
                     </div>
                 </div>

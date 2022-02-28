@@ -99,20 +99,49 @@ body{
     .wooGroup-section-1 h1.title-box{font-size: 92px;}
     .wooGroup-section-1 .content-box{font-size: 28px;}
     .wooGroup .wooGroup-section-boxRight p.content-box{font-size: 18px;}
-    .wooGroup-section-3 .content-box { font-size: 28px;line-height: 40px;}
-    
+    .wooGroup .wooGroup-section-3 .content-box { font-size: 28px;line-height: 40px;}
+    .content-boxPrivacyPolicy{
+        .title-box{
+            line-height: 37px;
+            font-size: 46px;
+        }
+    }
+    .wooGroup.privacyPolicy .wooGroup-sectionPrivacyPolicy .list-content .item{
+        font-size: 16px;
+        line-height: 24px;
+    }
 }
+.privacyPolicy-mobile{display: none;}
 
 #wooGroup{
     h1.title-box{
         text-align: center;
         letter-spacing: -10px;
         transition: all 0.5s ease;
+        position: relative;
         &:hover{
             color: $red;
             transition: all 0.5s ease;
         }
+        .text{
+            position: relative;
+            bottom: -40px;
+            opacity: 0;
+        }
     }
+    .swiper-slide-active .text1{
+        animation: textLogo1 0.5s ease 0.5s forwards;
+        transition: all 0.3s ease;
+    }
+    .swiper-slide-active .text2{
+        animation: textLogo2 0.5s ease 1s forwards;
+        transition: all 0.3s ease;
+    }
+    .swiper-slide-active .text3{
+        animation: textLogo3 0.5s ease 1.5s forwards;
+        transition: all 0.3s ease;
+    }
+    
 }
 a{
     position: relative;
@@ -152,32 +181,28 @@ a{
                 text-align: center;
                 max-width: 900px;
                 margin: auto;
+                position: relative;
+                top: 170px;
+                transition: opacity 2s ease;
             }
     }
-    .wooGroup .wooGroup-section-boxLeft {
-        transition: opacity 4s ease;
+    .swiper-slide-active .content-box{ 
+        transition: opacity 2s ease;
+        animation: contentBoxTop 2s ease 0s forwards;
+    }
+    .wooGroup-section-boxLeft {
+        transition: opacity 2s ease;
         opacity: 0;
     }
-    .wooGroup .swiper-slide-active .wooGroup-section-boxLeft {
+    .swiper-slide-active .wooGroup-section-boxLeft {
         opacity: 1;
     }
     .swiper-slide-active .wooGroup-section-boxLeft:before {
-        -webkit-animation: imgTop 4s ease 0s forwards;
-        animation: imgTop 5s ease 0s forwards;
+        -webkit-animation: imgTop 2s ease 0s forwards;
+        animation: imgTop 2s ease 0s forwards;
     }
-    @keyframes imgTop {
-        0% {
-          transform: translateY(0%);
-          -webkit-transition: all 3s ease;
-          transition: all 3s ease;
-        }
-        100% {
-          transform: translateY(-100%);
-          -webkit-transition: all 3s ease;
-          transition: all 3s ease;
-        }
-    }
-    .wooGroup-section-box{
+    
+    &-section-box{
             display: flex;
             flex-wrap: wrap;
             &Left{
@@ -234,6 +259,7 @@ a{
             }
         }
         .content-box{
+            color: $grey;
             a{
                 margin-top: 30px;
                 display: flex;
@@ -249,7 +275,7 @@ a{
             } 
          }
          .content-box{ 
-            animation: contentBox 2s ease 2s forwards;
+            animation: contentBox 1.5s ease 2s forwards;
          }
         
     }
@@ -263,18 +289,6 @@ a{
                 opacity: 0;
                 transition: all 0.3s ease;
             }
-        }
-        @keyframes heightBox{ 
-            from {height: 100%;transition: all 0.3s ease;}
-            to {height: 0;transition: all 0.3s ease;}
-        }
-        @keyframes titleTop {
-            from {top: 120px;opacity: 0;transition: all 0.3s ease;}
-            to {top: 0px;opacity: 1;transition: all 0.3s ease;}
-        }
-        @keyframes contentBox{
-            from {opacity: 0;transition: all 0.3s ease;}
-            to {opacity: 1;transition: all 0.3s ease;}
         }
     }
     &-section-3{
@@ -308,14 +322,7 @@ a{
                 }
             }
         }
-        @keyframes contentFooter{
-            from {top: -50px;opacity: 0;transition: all 0.3s ease;}
-            to {top: 0px;opacity: 1;transition: all 0.3s ease;}
-        }
-        @keyframes titleFooter{
-            from {left: 100px;opacity: 0;transition: all 0.3s ease;}
-            to {left: 0px;opacity: 1;transition: all 0.3s ease;}
-        }
+        
     }
     .footer{
         height: 50px;
@@ -370,6 +377,7 @@ a{
         display: flex;
         align-items: center;
         padding: 40px 0;
+        background: $white;
        h1.title-box{text-align: left;} 
        .list-content{
            display: flex;
@@ -377,6 +385,19 @@ a{
            .item{
             width: calc(50% - 10px);
             margin: 10px 5px;
+           }
+       }
+       .logo{
+           a{
+                &::after{
+                    content: unset;
+                }
+               svg:hover{
+                    path{
+                        transition: all 0.3s ease;
+                        fill: $red;
+                    }
+               }
            }
        }
     }
@@ -397,7 +418,7 @@ a{
     border-radius: 0 !important;
 }
 //mouse
-body.home {
+body {
     cursor: none;
     .cursor {
       pointer-events: none;
@@ -420,29 +441,7 @@ body.home {
       }      
     } 
   }
-  body.privacy-policy{
-    cursor: none;
-        .cursor {
-            pointer-events: none;
-        &__ball {
-            position: fixed;
-            top: 0;
-            left: 0;
-            mix-blend-mode: difference;
-            z-index: 1000;
-            circle {
-            fill: $black;
-            }
-            &--big{
-                svg{
-                    border: 1px solid $black;
-                    border-radius: 50%;
-                }
-            }
-        }      
-        } 
-  }
-  //duc
+//duc
   .swiper-pagination-clickable .swiper-pagination-bullet {
     position: relative;
     }
@@ -473,7 +472,7 @@ body.home {
     .parallax-bg {
         height: 200vh;
         position: absolute;
-        width: 100vw;
+        width: 100%;
         background-repeat: no-repeat;
         background-position: top;
         background-size: 100% 200vh;
@@ -488,6 +487,55 @@ body.home {
     }
     .swiper-slide.swiper-slide-active{
         opacity: 1 !important;
+    }
+// keyframes
+    @keyframes heightBox{ 
+        from {height: 100%;transition: all 0.3s ease;}
+        to {height: 0;transition: all 0.3s ease;}
+    }
+    @keyframes titleTop {
+        from {top: 120px;opacity: 0;transition: all 0.3s ease;}
+        to {top: 0px;opacity: 1;transition: all 0.3s ease;}
+    }
+    @keyframes contentBox{
+        from {opacity: 0;transition: all 0.3s ease;}
+        to {opacity: 1;transition: all 0.3s ease;}
+    }
+    @keyframes contentFooter{
+        from {top: -50px;opacity: 0;transition: all 0.3s ease;}
+        to {top: 0px;opacity: 1;transition: all 0.3s ease;}
+    }
+    @keyframes titleFooter{
+        from {left: 100px;opacity: 0;transition: all 0.3s ease;}
+        to {left: 0px;opacity: 1;transition: all 0.3s ease;}
+    }
+    @keyframes imgTop {
+        0% {
+          transform: translateY(0%);
+          -webkit-transition: all 3s ease;
+          transition: all 3s ease;
+        }
+        100% {
+          transform: translateY(-100%);
+          -webkit-transition: all 3s ease;
+          transition: all 3s ease;
+        }
+    }
+    @keyframes textLogo1{ 
+        from {bottom: -40px;opacity: 0;transition: all 0.3s ease;}
+        to {bottom: 0;opacity: 1;transition: all 0.3s ease;}
+    }
+    @keyframes textLogo2{ 
+        from {bottom: -40px;opacity: 0;transition: all 0.3s ease;}
+        to {bottom: 0;opacity: 1;transition: all 0.3s ease;}
+    }
+    @keyframes textLogo3{ 
+        from {bottom: -40px;opacity: 0;transition: all 0.3s ease;}
+        to {bottom: 0;opacity: 1;transition: all 0.3s ease;}
+    }
+    @keyframes contentBoxTop {
+        from {top: 170px;opacity: 0;line-height: 100px; transition: all 0.3s ease;}
+        to {top: 0;opacity: 1;transition: all 0.3s ease;}
     }
 //Responsive
 @media (max-width: 1200px) { 
@@ -578,15 +626,57 @@ body.home {
         }
     }
  }
+ @media (max-width: 1999px) {
+    .privacyPolicy-desktop{
+        display: none;
+    }
+    .privacyPolicy-mobile{display: block;}
+    .privacyPolicy-mobile{
+        .wooGroup-section-3{
+            opacity: 1;
+            .content-box{
+                top: 0;
+                opacity: 1;
+            }
+            .title-box{
+                left: 0;
+                opacity: 1;
+            }
+        }
+    }
+    body .cursor{display: none;}
+}
+@media (max-width: 912px) { 
+    .wooGroup.privacyPolicy.privacyPolicy-mobile{
+        .logo{
+            margin-bottom: 60px;
+        }
+        .wooGroup-sectionPrivacyPolicy .list-content .item{
+            width: 100%;
+            margin: 10px 5px;
+        }
+    }
+}
+@media (max-width: 768px) { 
+    
+}
 @media (max-width: 600px) { 
-    .wooGroup-section-1{
+    .wooGroup .wooGroup-section-1{
         .title-box{
             font-size: 46px;
+            letter-spacing: -3px !important;
         }
         .content-box{
             font-size: 16px;
-            line-height: 26px; 
+            line-height: 30px; 
             text-align: center;
+        }
+    }
+    
+    .wooGroup .swiper-slide-active .wooGroup-section-boxLeft:before{animation: unset!important;}
+    .wooGroup .wooGroup-section-boxLeft{
+        &::before{ 
+            content: unset;
         }
     }
     .wooGroup {
@@ -618,7 +708,7 @@ body.home {
                 }
                 .content-box{
                     font-size: 16px;
-                    line-height: 18px;
+                    line-height: 21px;
                     color: #707070;
                 }
             }
@@ -639,6 +729,7 @@ body.home {
             padding: 10px 0;
             height: auto;
             bottom: 11vh;
+            overflow: hidden;
             &-box{
                 height: auto !important;
                 &Left{
