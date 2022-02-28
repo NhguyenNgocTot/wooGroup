@@ -107,6 +107,28 @@ body{
     h1.title-box{
         text-align: center;
         letter-spacing: -10px;
+        transition: all 0.5s ease;
+        &:hover{
+            color: $red;
+            transition: all 0.5s ease;
+        }
+    }
+}
+a{
+    position: relative;
+    width: max-content !important;
+    &::after{
+        content: "";
+        width: 0;
+        height: 2px;
+        position: absolute;
+        transition: all 0.5s ease;
+        bottom: -5px;
+        left: 0;
+        background: $red;
+    }
+    &:hover:after{
+        width: 100%;
     }
 }
 .wooGroup{
@@ -162,7 +184,7 @@ body{
                 width: 50%;
                 position: relative;
                 &::before{
-                    background: #fff;
+                    background: $white;
                     content: "";
                     width: 100%;
                     height: 100%;
@@ -310,6 +332,13 @@ body{
             &Left,&Right{
                 width: 50%;
             }
+            &Left{
+                a{
+                    &::after{
+                        content: unset;
+                    }
+                }
+            }
             &Right{ 
                 text-align: right;
                 a{
@@ -453,6 +482,12 @@ body.home {
       
     .wooGroup-section-1 {
         background-image: none !important;
+    }
+    .swiper-slide{
+        opacity: 0 !important;
+    }
+    .swiper-slide.swiper-slide-active{
+        opacity: 1 !important;
     }
 //Responsive
 @media (max-width: 1200px) { 

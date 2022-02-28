@@ -11,7 +11,6 @@
   </div>
 </div>
 <?php wp_footer(); ?>
-<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
 <script>
     AOS.init();
@@ -27,7 +26,6 @@
         },
       });
        //mouse
-      jQuery(document).ready(function() {
         const $bigBall = document.querySelector('.cursor__ball--big');
         const $smallBall = document.querySelector('.cursor__ball--small');
         const $hoverables = document.querySelectorAll('.hoverable');
@@ -61,7 +59,6 @@
             scale: 1
           })
         }
-      });
       //dot
       jQuery(document).ready(function() {
         let SwiperArray = [];

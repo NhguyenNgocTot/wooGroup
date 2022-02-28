@@ -10,7 +10,7 @@ get_header();
         <div class="swiper mySwiper">
         <div
             class="parallax-bg"
-            style="background-image:url('http://localhost/main/wp-content/uploads/2022/02/OpenGraphImage-1.png')"
+            style="background-image:url('<?= get_template_directory_uri().'/assets/images/OpenGraphImage.png' ?>')"
             data-swiper-parallax="-300%"
         ></div>
             <div class="swiper-wrapper">
@@ -33,8 +33,6 @@ get_header();
                                     data-aos-easing="ease-in-sine"
                                 >O</span>
                             </h1>
-                            <!-- <p class="content-box" data-aos="fade-up" data-aos-delay="3000">
-                            </p> -->
                         </div>
                     </div>
                 </div>
@@ -53,7 +51,7 @@ get_header();
                         $image = get_sub_field('image');
                         $description = get_sub_field('description');
                 ?>
-                        <div class="swiper-slide wooGroup-section-2 wooGroup-section-2b <?= $i ?>" data-name="<?= $title ?>">
+                        <div class="swiper-slide wooGroup-section-2 wooGroup-section-2b" data-name="<?= $title ?>">
                             <div class="wooGroup-section-box">
                                 <div class="wooGroup-section-boxLeft">
                                     <img src="<?= $image ?>" alt="">
