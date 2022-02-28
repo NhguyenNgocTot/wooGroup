@@ -15,17 +15,6 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
 <script>
     AOS.init();
-      var swiper = new Swiper(".mySwiper", {
-        direction: "vertical",
-        slidesPerView: 1,
-        spaceBetween: 30,
-        mousewheel: true,
-        effect: "fade",
-        pagination: {
-          el: ".swiper-pagination",
-          clickable: true,
-        },
-      });
       var swiper = new Swiper(".mySwiper-privacyPolicy", {
         direction: "vertical",
         slidesPerView: 1,
